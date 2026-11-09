@@ -1,0 +1,406 @@
+{
+  "status": "ok",
+  "mode": "post",
+  "leakage_free": false,
+  "leakage_note": "Post-reconstruction features use mapper output and are NOT leakage-free.",
+  "data_kind": "synthetic",
+  "n_runs": 16,
+  "n_features": 23,
+  "feature_names": [
+    "num_input_images",
+    "num_registered_images",
+    "registration_ratio",
+    "num_points3D",
+    "num_observations",
+    "mean_reproj_error",
+    "median_reproj_error",
+    "p95_reproj_error",
+    "track_length_mean",
+    "track_length_median",
+    "track_length_p90",
+    "num_tracks_ge3",
+    "frac_tracks_ge3",
+    "mean_observations_per_registered_image",
+    "num_covis_pairs",
+    "weight_mean",
+    "reliability_mean",
+    "track_weight_p10",
+    "track_weight_median",
+    "track_error_mean",
+    "track_length_max",
+    "blur_mean",
+    "blur_p10"
+  ],
+  "dropped_all_nan_features": [],
+  "class_counts": {
+    "0": 9,
+    "1": 7
+  },
+  "split": {
+    "test_size": 0.3,
+    "random_state": 0,
+    "group_column": "condition",
+    "n_runs": 16,
+    "n_groups": 8,
+    "evaluation_mode": "group_held_out",
+    "test_groups": [
+      "blur_severe",
+      "clean",
+      "limited_views"
+    ],
+    "train_groups": [
+      "blur_mild",
+      "combined_severe",
+      "degraded_matches_mild",
+      "degraded_matches_severe",
+      "limited_views_severe"
+    ],
+    "attempt": 0
+  },
+  "train_runs": [
+    "blur_mild_s0",
+    "blur_mild_s1",
+    "combined_severe_s0",
+    "combined_severe_s1",
+    "degraded_matches_mild_s0",
+    "degraded_matches_mild_s1",
+    "degraded_matches_severe_s0",
+    "degraded_matches_severe_s1",
+    "limited_views_severe_s0",
+    "limited_views_severe_s1"
+  ],
+  "test_runs": [
+    "blur_severe_s0",
+    "blur_severe_s1",
+    "clean_s0",
+    "clean_s1",
+    "limited_views_s0",
+    "limited_views_s1"
+  ],
+  "models": {
+    "logistic_regression": {
+      "metrics": {
+        "n": 6,
+        "threshold": 0.5,
+        "accuracy": 0.6666666666666666,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "tp": 0,
+        "tn": 4,
+        "fp": 0,
+        "fn": 2,
+        "predicted_positive": 0,
+        "actual_positive": 2,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "metrics_at_default_threshold": {
+        "n": 6,
+        "threshold": 0.5,
+        "accuracy": 0.6666666666666666,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "tp": 0,
+        "tn": 4,
+        "fp": 0,
+        "fn": 2,
+        "predicted_positive": 0,
+        "actual_positive": 2,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "threshold_tuned_on_train": 0.5,
+      "calibrated": false,
+      "importance": {
+        "num_input_images": 0.035085484327338726,
+        "num_registered_images": 0.06244818479561526,
+        "registration_ratio": 0.18070270536417854,
+        "num_points3D": 0.09472708270006569,
+        "num_observations": 0.05162621732926134,
+        "mean_reproj_error": 0.04988680138327471,
+        "median_reproj_error": 0.05732141059283098,
+        "p95_reproj_error": 0.016931479498558666,
+        "track_length_mean": 0.020019263724136864,
+        "track_length_median": 0.020021892632778215,
+        "track_length_p90": 0.02002189263277822,
+        "num_tracks_ge3": 0.020021308481492067,
+        "frac_tracks_ge3": 0.020019837265420778,
+        "mean_observations_per_registered_image": 0.08436819504263877,
+        "num_covis_pairs": 0.02502703133681257,
+        "weight_mean": 0.03747707442549871,
+        "reliability_mean": 0.0374770744254987,
+        "track_weight_p10": 0.03523913986327555,
+        "track_weight_median": 0.038146910649473155,
+        "track_error_mean": 0.04988680138327471,
+        "track_length_max": 0.020021892632778236,
+        "blur_mean": 0.011320358321469779,
+        "blur_p10": 0.012201961191549857
+      }
+    },
+    "random_forest": {
+      "metrics": {
+        "n": 6,
+        "threshold": 0.5,
+        "accuracy": 0.6666666666666666,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "tp": 0,
+        "tn": 4,
+        "fp": 0,
+        "fn": 2,
+        "predicted_positive": 0,
+        "actual_positive": 2,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "metrics_at_default_threshold": {
+        "n": 6,
+        "threshold": 0.5,
+        "accuracy": 0.6666666666666666,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "tp": 0,
+        "tn": 4,
+        "fp": 0,
+        "fn": 2,
+        "predicted_positive": 0,
+        "actual_positive": 2,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "threshold_tuned_on_train": 0.5,
+      "calibrated": false,
+      "importance": {
+        "num_input_images": 0.0006693440428380188,
+        "num_registered_images": 0.09236947791164658,
+        "registration_ratio": 0.11646586345381527,
+        "num_points3D": 0.0930388219544846,
+        "num_observations": 0.11915156287382032,
+        "mean_reproj_error": 0.06375531042620453,
+        "median_reproj_error": 0.05235164950402891,
+        "p95_reproj_error": 0.012195414657638392,
+        "track_length_mean": 0.04188864819215168,
+        "track_length_median": 0.042311137745506794,
+        "track_length_p90": 0.01593553701987437,
+        "num_tracks_ge3": 0.01575532900834106,
+        "frac_tracks_ge3": 0.028184455578241247,
+        "mean_observations_per_registered_image": 0.09168251845209678,
+        "num_covis_pairs": 0.020749665327978582,
+        "weight_mean": 0.018653242366159832,
+        "reliability_mean": 0.02886930893034254,
+        "track_weight_p10": 0.028112449799196786,
+        "track_weight_median": 0.02873995983935743,
+        "track_error_mean": 0.043142266033832304,
+        "track_length_max": 0.024123508686761698,
+        "blur_mean": 0.00474425173220354,
+        "blur_p10": 0.01711027646347875
+      }
+    },
+    "gradient_boosting": {
+      "metrics": {
+        "n": 6,
+        "threshold": 0.5,
+        "accuracy": 0.6666666666666666,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "roc_auc": 0.5,
+        "average_precision": 0.3333333333333333,
+        "tp": 0,
+        "tn": 4,
+        "fp": 0,
+        "fn": 2,
+        "predicted_positive": 0,
+        "actual_positive": 2,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "metrics_at_default_threshold": {
+        "n": 6,
+        "threshold": 0.5,
+        "accuracy": 0.6666666666666666,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "roc_auc": 0.5,
+        "average_precision": 0.3333333333333333,
+        "tp": 0,
+        "tn": 4,
+        "fp": 0,
+        "fn": 2,
+        "predicted_positive": 0,
+        "actual_positive": 2,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "threshold_tuned_on_train": 0.5,
+      "calibrated": false,
+      "importance": {
+        "num_input_images": 0.0,
+        "num_registered_images": 0.2403251955132032,
+        "registration_ratio": 0.19493760336724936,
+        "num_points3D": 0.2881539306137664,
+        "num_observations": 0.2765832705057812,
+        "mean_reproj_error": 0.0,
+        "median_reproj_error": 0.0,
+        "p95_reproj_error": 0.0,
+        "track_length_mean": 0.0,
+        "track_length_median": 0.0,
+        "track_length_p90": 0.0,
+        "num_tracks_ge3": 0.0,
+        "frac_tracks_ge3": 0.0,
+        "mean_observations_per_registered_image": 0.0,
+        "num_covis_pairs": 0.0,
+        "weight_mean": 0.0,
+        "reliability_mean": 0.0,
+        "track_weight_p10": 0.0,
+        "track_weight_median": 0.0,
+        "track_error_mean": 0.0,
+        "track_length_max": 0.0,
+        "blur_mean": 0.0,
+        "blur_p10": 0.0
+      }
+    }
+  },
+  "best_model": "logistic_regression",
+  "best_metrics": {
+    "n": 6,
+    "threshold": 0.5,
+    "accuracy": 0.6666666666666666,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "specificity": 1.0,
+    "roc_auc": 1.0,
+    "average_precision": 1.0,
+    "tp": 0,
+    "tn": 4,
+    "fp": 0,
+    "fn": 2,
+    "predicted_positive": 0,
+    "actual_positive": 2,
+    "confusion_matrix": [
+      [
+        4,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ]
+  },
+  "threshold": 0.5,
+  "default_threshold": 0.5,
+  "preliminary": false,
+  "preliminary_reason": null,
+  "warnings": [],
+  "leave_one_condition_out": {
+    "status": "ok",
+    "folds": 8,
+    "metrics": {
+      "n": 16,
+      "threshold": 0.5,
+      "accuracy": 0.75,
+      "precision": 0.8,
+      "recall": 0.5714285714285714,
+      "f1": 0.6666666666666666,
+      "specificity": 0.8888888888888888,
+      "roc_auc": 0.8095238095238095,
+      "average_precision": 0.7488095238095238,
+      "tp": 4,
+      "tn": 8,
+      "fp": 1,
+      "fn": 3,
+      "predicted_positive": 5,
+      "actual_positive": 7,
+      "confusion_matrix": [
+        [
+          8,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    }
+  },
+  "oof_predictions": "outputs\\failure_model_synthetic\\post\\oof_predictions.csv",
+  "label_config": {
+    "min_registered_ratio": 0.6,
+    "min_num_points3D": 1000.0,
+    "max_mean_reproj_error": 2.0,
+    "max_median_reproj_error": 1.5,
+    "min_track_length_median": 2.0
+  },
+  "trained_at": "2026-11-09T23:58:17",
+  "dataset_csv": "outputs\\failure_model_synthetic\\post\\runs_dataset_post.csv",
+  "model_path": "outputs\\failure_model_synthetic\\post\\failure_model.joblib"
+}

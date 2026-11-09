@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Project outputs and downloads
+outputs/**
+!outputs/.gitkeep
+!outputs/README.md
+!outputs/REPORT.md
+!outputs/REPORT.pdf
+!outputs/REPORT_SYNTHETIC.md
+!outputs/REPORT_SYNTHETIC.pdf
+!outputs/environment.json
+experiments/**
+!experiments/.gitkeep
+!experiments/README.md
+data/**
+!data/.gitkeep
+tools/**
+!tools/.gitkeep
+!tools/README.md
+*.7z
+*.zip
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

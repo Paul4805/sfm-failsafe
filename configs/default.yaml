@@ -1,0 +1,124 @@
+project:
+  name: sfm-failsafe
+  seed: 0
+
+paths:
+  data_root: data
+  runs_root: outputs/runs
+  experiments_root: outputs/experiments
+  failure_model_dir: outputs/failure_model
+  report: outputs/REPORT.md
+
+dataset:
+  name: eth3d_courtyard
+  raw_root: data/raw/eth3d
+  images_dir: data/courtyard/images
+  calibration_dir: data/courtyard/calibration
+  image_glob: "**/dslr_images_undistorted/*.JPG"
+  manifest: data/courtyard/manifest.json
+  subsets_root: data/courtyard/subsets
+  camera_model: OPENCV
+  max_images: null
+  downscale: 1.0
+
+colmap:
+  executable: colmap
+  use_gpu: true
+  gpu_index: "0"
+  camera_model: OPENCV
+  single_camera: true
+  matcher: exhaustive
+  exhaustive_block_size: 50
+  max_image_size: 2000
+  sift_max_features: 8192
+  sift_peak_threshold: 0.004
+  sift_edge_threshold: 10
+  mapper_min_num_matches: 15
+  mapper_ba_global_images_ratio: 1.1
+  mapper_ba_global_points_ratio: 1.1
+  mapper_ba_local_max_refinements: 3
+  mapper_max_num_models: 10
+  timeout_seconds: 14400
+  extra_feature_args: []
+  extra_matcher_args: []
+  extra_mapper_args: []
+
+thresholds:
+  min_registered_ratio: 0.6
+  min_num_points3D: 1000
+  max_mean_reproj_error: 2.0
+  max_median_reproj_error: 1.5
+  min_track_length_median: 2.0
+  mapper_failure_is_failure: true
+
+analysis:
+  max_points: 200000
+  blur_max_images: 200
+  angle_sample: 8
+  min_track_length: 2
+
+features:
+  min_candidate_track_length: 2
+  max_db_pairs: null
+
+failure_model:
+  mode: pre
+  test_size: 0.3
+  random_state: 0
+  models:
+    - logistic_regression
+    - random_forest
+    - gradient_boosting
+  threshold: 0.5
+  min_class_samples: 2
+  group_column: condition
+  selection_metric: roc_auc
+  calibrate: false
+
+weighting:
+  w_min: 0.05
+  map_mode: sigmoid
+  sigmoid_steepness: 6.0
+  min_track_length: 2
+  feature_weights:
+    length: 0.25
+    reproj_error: 0.25
+    angle: 0.15
+    spread: 0.15
+    consistency: 0.10
+    blur: 0.10
+  refs:
+    track_length: 6.0
+    reproj_error: 1.5
+    angle_deg: 8.0
+    spread_norm: 0.15
+    blur_laplacian: 120.0
+
+weighted_ba:
+  engine: auto
+  max_points: 1500
+  max_iterations: 40
+  loss: soft_l1
+  loss_scale: 2.0
+  sigma_px: 1.0
+  min_weight: 0.0
+  min_observations: 20
+  refine_intrinsics: false
+  fixed_camera: first
+  retriangulate_unselected: true
+  retriangulation_iterations: 3
+
+evaluation:
+  comparison_metrics:
+    - num_registered_images
+    - registration_ratio
+    - num_points3D
+    - mean_reproj_error
+    - median_reproj_error
+    - track_length_median
+    - runtime_seconds
+
+demo:
+  enabled: false
+  num_runs: 12
+  seed: 0

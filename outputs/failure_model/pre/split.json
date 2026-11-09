@@ -1,0 +1,22 @@
+{
+  "test_size": 0.3,
+  "random_state": 0,
+  "group_column": "condition",
+  "n_runs": 9,
+  "n_groups": 9,
+  "evaluation_mode": "stratified_holdout",
+  "group_split_warning": "no group split contained both classes; falling back to stratified run split",
+  "train_indices": [
+    0,
+    4,
+    7,
+    2,
+    1,
+    5
+  ],
+  "test_indices": [
+    6,
+    8,
+    3
+  ]
+}

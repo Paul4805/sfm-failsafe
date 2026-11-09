@@ -1,0 +1,18 @@
+{
+  "run_name": "limited_views_severe",
+  "condition": "limited_views_severe",
+  "data_kind": "real",
+  "images_dir": "data/courtyard/subsets/limited_views_severe/images",
+  "source_images_dir": "data/courtyard/subsets/limited_views_severe/images",
+  "image_names": [
+    "DSC_0286.JPG",
+    "DSC_0299.JPG",
+    "DSC_0310.JPG",
+    "DSC_0323.JPG"
+  ],
+  "num_input_images": 4,
+  "downscale": 1.0,
+  "staged": false,
+  "colmap_version": "COLMAP 3.9.1 -- Structure-from-Motion and Multi-View Stereo",
+  "started_at": "2026-11-09T23:47:48"
+}

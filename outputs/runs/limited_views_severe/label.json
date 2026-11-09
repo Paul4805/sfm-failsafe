@@ -1,0 +1,27 @@
+{
+  "label": {
+    "label": 1,
+    "label_name": "failure",
+    "reasons": [
+      "mapper_failed",
+      "registration_ratio 0.000 < 0.600",
+      "num_points3D 0 < 1000"
+    ],
+    "checks": {
+      "mapper_failed": true,
+      "low_registration_ratio": true,
+      "too_few_points": true,
+      "high_mean_reproj_error": null,
+      "high_median_reproj_error": null,
+      "short_tracks": null
+    },
+    "thresholds": {
+      "min_registered_ratio": 0.6,
+      "min_num_points3D": 1000.0,
+      "max_mean_reproj_error": 2.0,
+      "max_median_reproj_error": 1.5,
+      "min_track_length_median": 2.0
+    }
+  },
+  "summary_path": "outputs/runs/limited_views_severe/reconstruction_summary.json"
+}

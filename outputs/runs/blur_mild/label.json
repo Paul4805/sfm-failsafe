@@ -1,0 +1,23 @@
+{
+  "label": {
+    "label": 0,
+    "label_name": "success",
+    "reasons": [],
+    "checks": {
+      "mapper_failed": false,
+      "low_registration_ratio": false,
+      "too_few_points": false,
+      "high_mean_reproj_error": false,
+      "high_median_reproj_error": false,
+      "short_tracks": false
+    },
+    "thresholds": {
+      "min_registered_ratio": 0.6,
+      "min_num_points3D": 1000.0,
+      "max_mean_reproj_error": 2.0,
+      "max_median_reproj_error": 1.5,
+      "min_track_length_median": 2.0
+    }
+  },
+  "summary_path": "outputs/runs/blur_mild/reconstruction_summary.json"
+}

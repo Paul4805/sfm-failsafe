@@ -1,0 +1,34 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "cv2": "5.0.0",
+    "scipy": "1.18.1",
+    "yaml": "6.0.3",
+    "joblib": "1.6.0",
+    "pytest": "9.2.0",
+    "reportlab": "5.1.0",
+    "pycolmap": "unavailable (ModuleNotFoundError)",
+    "pyceres": "unavailable (ModuleNotFoundError)"
+  },
+  "colmap": {
+    "executable": "tools/colmap391cuda/COLMAP-3.9.1-windows-cuda/bin/colmap.exe",
+    "version": "COLMAP 3.9.1 -- Structure-from-Motion and Multi-View Stereo"
+  },
+  "gpu": [
+    "NVIDIA GeForce RTX 3060 Laptop GPU, 6144 MiB, 621.01"
+  ],
+  "dataset": {
+    "manifest": "data/courtyard/manifest.json",
+    "scene": "courtyard",
+    "num_images": 38,
+    "camera_model": "PINHOLE",
+    "images_dir": "data/courtyard/images"
+  }
+}

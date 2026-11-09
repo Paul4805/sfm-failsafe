@@ -1,0 +1,61 @@
+{
+  "run_name": "degraded_matches_severe",
+  "condition": "degraded_matches_severe",
+  "data_kind": "real",
+  "status": "success",
+  "num_input_images": 38,
+  "num_registered_images": 2,
+  "registration_ratio": 0.05263157894736842,
+  "num_points3D": 128,
+  "mean_reproj_error": 0.38583880255221037,
+  "median_reproj_error": 0.23188162806255025,
+  "track_length_median": 2.0,
+  "model_dir": "outputs/runs/degraded_matches_severe/model",
+  "sparse_dir": "outputs/runs/degraded_matches_severe/sparse",
+  "database": "outputs/runs/degraded_matches_severe/database.db",
+  "command_log": "outputs/runs/degraded_matches_severe/logs/commands.log",
+  "colmap_version": "COLMAP 3.9.1 -- Structure-from-Motion and Multi-View Stereo",
+  "timings": {
+    "feature_extraction": 0.0,
+    "matching": 0.0,
+    "mapping": 0.3300282000564039
+  },
+  "startup_runtime_seconds": 0.0,
+  "num_cameras": 2,
+  "num_observations": 256,
+  "max_reproj_error": 2.677341362432934,
+  "p95_reproj_error": 1.2438125885148485,
+  "track_length_mean": 2.0,
+  "track_length_p90": 2.0,
+  "track_length_max": 2.0,
+  "num_tracks": 128,
+  "num_tracks_ge3": 0,
+  "frac_tracks_ge3": 0.0,
+  "mean_observations_per_registered_image": 128.0,
+  "camera_bbox_diagonal": 10.000000293131656,
+  "point_bbox_diagonal": 11.142087766214505,
+  "num_covis_pairs": 61,
+  "weight_mean": 0.8619367470575638,
+  "reliability_mean": 0.8546702600605935,
+  "selected_sparse_model": "outputs/runs/degraded_matches_severe/sparse/0",
+  "selected_sparse_stats": {
+    "num_images": 2,
+    "num_points3D": 128,
+    "num_observations": 256
+  },
+  "success_label": 1,
+  "success_label_name": "failure",
+  "failure_reasons": [
+    "registration_ratio 0.053 < 0.600",
+    "num_points3D 128 < 1000"
+  ],
+  "label_checks": {
+    "mapper_failed": false,
+    "low_registration_ratio": true,
+    "too_few_points": true,
+    "high_mean_reproj_error": false,
+    "high_median_reproj_error": false,
+    "short_tracks": false
+  },
+  "runtime_seconds": 7.915387299959548
+}

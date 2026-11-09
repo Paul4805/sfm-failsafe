@@ -1,0 +1,41 @@
+project:
+  name: sfm-failsafe-courtyard
+
+dataset:
+  name: eth3d_courtyard
+  raw_root: data/raw/eth3d
+  images_dir: data/courtyard/images
+  calibration_dir: data/courtyard/calibration
+  image_glob: "**/dslr_images_undistorted/*.JPG"
+  manifest: data/courtyard/manifest.json
+  camera_model: PINHOLE
+  max_images: null
+
+colmap:
+  executable: tools/colmap391cuda/COLMAP-3.9.1-windows-cuda/bin/colmap.exe
+  use_gpu: true
+  gpu_index: "0"
+  camera_model: PINHOLE
+  single_camera: false
+  matcher: exhaustive
+  max_image_size: 2000
+  sift_max_features: 8192
+  mapper_min_num_matches: 15
+  mapper_max_num_models: 10
+
+thresholds:
+  min_registered_ratio: 0.6
+  min_num_points3D: 1000
+  max_mean_reproj_error: 2.0
+  max_median_reproj_error: 1.5
+
+weighting:
+  w_min: 0.05
+  map_mode: sigmoid
+
+weighted_ba:
+  engine: auto
+  max_points: 25000
+  max_iterations: 40
+  loss: soft_l1
+  loss_scale: 2.0
