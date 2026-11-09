@@ -215,7 +215,8 @@ def _training_section(metrics_path: Path, base: Path, title: str) -> list[str]:
         if plots:
             lines.append("Plots: " + ", ".join(_link(p, base) for p in plots))
             lines.append("")
-    lines.append(f"- Dataset: {_link(metrics_path.parent / f'runs_dataset_{metrics.get("mode")}.csv', base)}")
+    dataset_file = f"runs_dataset_{metrics.get('mode')}.csv"
+    lines.append(f"- Dataset: {_link(metrics_path.parent / dataset_file, base)}")
     lines.append(f"- Model: {_link(metrics_path.parent / 'failure_model.joblib', base)}")
     lines.append("")
     return lines
