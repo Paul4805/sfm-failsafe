@@ -1,5 +1,7 @@
 # SfM-FailSafe
 
+[![tests](https://github.com/Paul4805/sfm-failsafe/actions/workflows/tests.yml/badge.svg)](https://github.com/Paul4805/sfm-failsafe/actions/workflows/tests.yml)
+
 **Failure prediction and adaptive track weighting for sparse 3D reconstruction.**
 
 This repository studies when COLMAP Structure-from-Motion (SfM) fails or becomes
@@ -434,3 +436,10 @@ invent numbers. If a heavy experiment was not run, the report says so.
   copies/stages inputs; it never edits the source database in place.
 - `--max-images` selects images evenly across the sorted list; use it for smoke
   tests, not for final numbers.
+
+## 12. License
+
+No open-source license has been chosen for this coursework project. The code and
+results are published for review and reproducibility; contact the repository
+owner before reuse or redistribution. ETH3D data remains subject to the ETH3D
+terms of use.
